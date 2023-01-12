@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>View 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="view2.ts"></script>
+  </head>
+  <body>
+    <div *ngIf="postingId">
+      <h2>Thank you for using our service!</h2>
+      <p>Your posting id is {{ postingId }}</p>
+      <button (click)="goToView0()">Back</button>
+    </div>
+  </body>
+</html>

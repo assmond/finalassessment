@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Listing<form>
+        <div class="form-group">
+          <label>Seller's Name</label>
+          <input type="text" class="form-control" [(ngModel)]="listing.sellerName" name="sellerName" required>
+        </div>
+        <div class="form-group">
+          <label>Seller's Email</label>
+          <input type="email" class="form-control" [(ngModel)]="listing.sellerEmail" name="sellerEmail" required>
+        </div>
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" class="form-control" [(ngModel)]="listing.title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea class="form-control" [(ngModel)]="listing.description" name="description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Image</label>
+            <input type="file" (change)="listing.image = $event.target.files[0]" name="image" required>
+          </div>
+          <button class="btn btn-primary" (click)="postListing()">Post</button>
+          <button class="btn btn-secondary" (click)="clearForm()">Clear</button>
+        </form>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='create-listing.component.ts'></script>
+</head>
+<body>
+    
+</body>
+</html>
